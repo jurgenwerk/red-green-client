@@ -1,1 +1,44 @@
-{{outlet}}
+<div class="navbar">
+  <div class="navbar-period">
+    <button>
+      &#60;
+    </button>
+    <span class="period-title">
+      March 2016
+    </span>
+    <button>
+      >
+    </button>
+  </div>
+  <div class="user-actions">
+    <button>
+      Sign out
+    </button>
+  </div>
+</div>
+
+<div class="sidebar">
+  <ul class="sidebar-items">
+    <li class="sidebar-item">
+      {{#link-to 'dashboard.overview'}}
+        Overview
+        <p> $100 left </p>
+      {{/link-to}}
+    </li>
+    <li class="sidebar-item">
+      {{#link-to 'dashboard.expenses'}}
+        Expenses
+        <p> $50 </p>
+      {{/link-to}}
+    </li>
+    <li class="sidebar-item">
+      {{#link-to 'dashboard.incomes'}}
+        Incomes <p> $50 </p>
+      {{/link-to}}
+    </li>
+  </ul>
+</div>
+
+<div class="main">
+  {{outlet}}
+</div>
