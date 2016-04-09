@@ -1,1 +1,24 @@
-{{outlet}}
+<div class="form-container">
+  <form {{action 'signup' email password on="submit"}}>
+    <h2> Sign up </h2>
+
+    {{input value=email placeholder="E-mail"}}
+    {{input value=password type="password" placeholder="Password"}}
+
+    {{#if signupError}}
+      <p> {{signupError}} </p>
+    {{/if}}
+
+    <button {{action 'signup' email password}} disabled={{isSigningUp}}>
+      {{#if isSigningUp}}
+        Signing up...
+      {{else}}
+        Sign up
+      {{/if}}
+    </button>
+
+    {{#link-to 'login'}}
+      Login
+    {{/link-to}}
+  </form>
+</div>
