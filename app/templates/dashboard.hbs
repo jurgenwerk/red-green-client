@@ -11,6 +11,9 @@
     </button>
   </div>
   <div class="user-actions">
+    <a>
+      {{session.currentUser.email}}
+    </a>
     <button {{action 'logout'}}>
       Sign out
     </button>
