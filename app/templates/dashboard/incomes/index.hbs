@@ -1,1 +1,8 @@
-<h1>Incomes</h1>
+<p> Incomes: ({{incomes.length}}) </p>
+<ul>
+  {{#each incomes as |income|}}
+    <li>
+      {{money income.value}} ({{income.entryDate}})
+    </li>
+  {{/each}}
+</ul>

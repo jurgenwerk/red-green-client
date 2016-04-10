@@ -12,6 +12,9 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
       this.transitionTo('dashboard.overview');
     }
   },
+  model() {
+    return this.store.findAll('balance-change');
+  },
   actions: {
     logout() {
       this.get('session').invalidate();

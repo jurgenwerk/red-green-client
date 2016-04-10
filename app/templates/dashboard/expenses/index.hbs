@@ -1,1 +1,8 @@
-<h1>Expenses</h1>
+<p> Expenses: ({{expenses.length}}) </p>
+<ul>
+  {{#each expenses as |expense|}}
+    <li>
+      {{money expense.value}} ({{expense.entryDate}})
+    </li>
+  {{/each}}
+</ul>

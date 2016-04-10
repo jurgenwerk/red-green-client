@@ -25,18 +25,29 @@
     <li class="sidebar-item">
       {{#link-to 'dashboard.overview'}}
         Overview
-        <p> $100 left </p>
+        <p>
+          {{#if (lt sumDifference 0)}}
+            {{money sumDifference currencySymbol}} in the red
+          {{else}}
+            {{money sumDifference currencySymbol}} left
+          {{/if}}
+        </p>
       {{/link-to}}
     </li>
     <li class="sidebar-item">
       {{#link-to 'dashboard.expenses'}}
         Expenses
-        <p> $50 </p>
+        <p>
+          {{money expenseSum currencySymbol}}
+        </p>
       {{/link-to}}
     </li>
     <li class="sidebar-item">
       {{#link-to 'dashboard.incomes'}}
-        Incomes <p> $50 </p>
+        Incomes
+        <p>
+          {{money incomeSum currencySymbol}}
+        </p>
       {{/link-to}}
     </li>
   </ul>
