@@ -1,12 +1,12 @@
 <div class="navbar">
   <div class="navbar-period">
-    <button>
+    <button {{action 'goPeriodBack'}}>
       &#60;
     </button>
     <span class="period-title">
-      March 2016
+      {{period-in-words period}}
     </span>
-    <button>
+    <button {{action 'goPeriodNext'}}>
       >
     </button>
   </div>
