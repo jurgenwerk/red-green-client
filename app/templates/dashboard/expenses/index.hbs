@@ -1,8 +1,21 @@
-<p> Expenses: ({{expenses.length}}) </p>
-<ul>
-  {{#each expenses as |expense|}}
-    <li>
-      {{money expense.value}} ({{expense.entryDate}})
+{{#if expenses}}
+  <ul class="balance-change-list">
+    <li class="balance-change-sorters">
+      <span class="balance-change-field">
+        Date
+      </span>
+      <span class="balance-change-field">
+        Expense
+      </span>
     </li>
-  {{/each}}
-</ul>
+    {{#each expenses as |expense|}}
+      {{balance-change
+        tagName="li"
+        balanceChange=expense
+        currencySymbol="$"
+      }}
+    {{/each}}
+  </ul>
+{{else}}
+  No expenses for selected period.
+{{/if}}

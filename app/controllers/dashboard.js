@@ -14,6 +14,9 @@ export default Ember.Controller.extend(BalanceChangePropertiesMixin, {
     goPeriodNext() {
       const nextPeriod = moment(this.get('period')).add(1, "month").format("YYYY-MM");
       this.set('period', nextPeriod);
+    },
+    logout() {
+      this.get('session').invalidate();
     }
   }
 });

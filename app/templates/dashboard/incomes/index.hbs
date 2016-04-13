@@ -1,8 +1,21 @@
-<p> Incomes: ({{incomes.length}}) </p>
-<ul>
-  {{#each incomes as |income|}}
-    <li>
-      {{money income.value}} ({{income.entryDate}})
+{{#if incomes}}
+  <ul class="balance-change-list">
+    <li class="balance-change-sorters">
+      <span class="balance-change-field">
+        Date
+      </span>
+      <span class="balance-change-field">
+        Expense
+      </span>
     </li>
-  {{/each}}
-</ul>
+    {{#each incomes as |income|}}
+      {{balance-change
+        tagName="li"
+        balanceChange=income
+        currencySymbol="$"
+      }}
+    {{/each}}
+  </ul>
+{{else}}
+  No incomes for selected period.
+{{/if}}

@@ -1,0 +1,19 @@
+<div class="navbar">
+  <div class="navbar-period">
+    <button {{action (action goPeriodBack)}}>
+      &#60;
+    </button>
+    <span class="period-title">
+      {{period-in-words period}}
+    </span>
+    <button {{action (action goPeriodNext)}}>
+      >
+    </button>
+  </div>
+  <div class="user-actions">
+    <a> {{currentUser.email}} </a>
+    <button {{action (action logout)}}>
+      Sign out
+    </button>
+  </div>
+</div>
