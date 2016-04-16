@@ -13,9 +13,14 @@
         tagName="li"
         balanceChange=expense
         currencySymbol="$"
+        delete=(action 'delete')
       }}
     {{/each}}
   </ul>
 {{else}}
   No expenses for selected period.
 {{/if}}
+
+{{#link-to 'dashboard.expenses.new' class="button"}}
+  Add
+{{/link-to}}

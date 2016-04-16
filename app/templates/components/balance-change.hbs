@@ -4,3 +4,17 @@
 <span class="balance-change-field">
   {{money balanceChange.value currencySymbol}}
 </span>
+<span class="balance-change-field">
+  {{#if balanceChange.isExpense}}
+    {{#link-to 'dashboard.expenses.edit' balanceChange class="button"}}
+      Edit
+    {{/link-to}}
+  {{else}}
+    {{#link-to 'dashboard.incomes.edit' balanceChange class="button"}}
+      Edit
+    {{/link-to}}
+  {{/if}}
+  <button {{action (action delete balanceChange)}}>
+    x
+  </button>
+</span>

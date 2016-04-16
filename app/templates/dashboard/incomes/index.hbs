@@ -5,7 +5,7 @@
         Date
       </span>
       <span class="balance-change-field">
-        Expense
+        Income
       </span>
     </li>
     {{#each incomes as |income|}}
@@ -13,9 +13,14 @@
         tagName="li"
         balanceChange=income
         currencySymbol="$"
+        delete=(action 'delete')
       }}
     {{/each}}
   </ul>
 {{else}}
   No incomes for selected period.
 {{/if}}
+
+{{#link-to 'dashboard.incomes.new' class="button"}}
+  Add
+{{/link-to}}
