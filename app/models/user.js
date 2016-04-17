@@ -1,6 +1,6 @@
 import DS from 'ember-data';
 import Ember from 'ember';
-import currencies from 'red-green-client/constants/currencies'
+import currencies from 'red-green-client/constants/currencies';
 
 export default DS.Model.extend({
   currency: DS.attr('string'),

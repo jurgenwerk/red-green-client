@@ -2,10 +2,11 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   padWithZero(value) {
-    if (String(value).length === 1)
+    if (String(value).length === 1) {
       return `0${value}`;
-    else
+    } else {
       return value;
+    }
   },
   getSeriesData() {
     const dateParts = this.get('period').split("-");

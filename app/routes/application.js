@@ -12,8 +12,9 @@ export default Ember.Route.extend(ApplicationRouteMixin, {
     this.loadUser();
   },
   loadUser() {
-    if (!this.get('session.isAuthenticated'))
+    if (!this.get('session.isAuthenticated')) {
       return;
+    }
 
     const url = `${ENV.apiBaseURL}/users/me`;
     const request = this.get('authenticatedAjax').request(url);

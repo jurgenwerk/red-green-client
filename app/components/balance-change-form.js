@@ -19,7 +19,7 @@ export default Ember.Component.extend({
     return Math.round(accounting.unformat(input)*100);
   },
   valueForDate: Ember.computed('balanceChangeData.entryDate', {
-    get(key) {
+    get() {
       return this.get('balanceChangeData.entryDate');
     },
     set(key, value) {
@@ -27,10 +27,10 @@ export default Ember.Component.extend({
       return value;
     }
   }),
-  valueIsNegative: Em.computed('balanceChangeData.value', function() {
+  valueIsNegative: Ember.computed('balanceChangeData.value', function() {
     return this.get('balanceChangeData.value') < 0;
   }),
-  isValid: Em.computed('balanceChangeData.value', 'valueIsNegative', function() {
+  isValid: Ember.computed('balanceChangeData.value', 'valueIsNegative', function() {
     return this.get('balanceChangeData.value') && !this.get('valueIsNegative');
   }),
   disableButton: Ember.computed('balanceChange.isSaving', 'isValid', function() {

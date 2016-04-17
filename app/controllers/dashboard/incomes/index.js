@@ -7,7 +7,7 @@ export default Ember.Controller.extend(BalanceChangePropertiesMixin, {
     delete(balanceChange) {
       if (confirm("Are you sure?")) {
         balanceChange.destroyRecord().then(() => {
-          this.send('refreshRoute')
+          this.send('refreshRoute');
         });
       }
     }

@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import currencies from 'red-green-client/constants/currencies'
+import currencies from 'red-green-client/constants/currencies';
 
 export default Ember.Controller.extend({
   currencies: currencies,
@@ -25,7 +25,7 @@ export default Ember.Controller.extend({
       this.get('currentUser').setProperties(attrsToSave);
 
       this.get('currentUser').save().then(() => {
-        this.set('saveMessage', 'Saved.')
+        this.set('saveMessage', 'Saved.');
       });
     }
   }

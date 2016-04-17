@@ -471,4 +471,4 @@ export default {
     symbol: "ZK",
     name: "Zambian Kwacha"
   }
-}
+};
