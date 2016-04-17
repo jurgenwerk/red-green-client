@@ -9,3 +9,14 @@
 </h2>
 
 {{progress-bar widthPercent=expensePercent class="expense-bar"}}
+
+{{monthly-overview-chart
+  balanceChanges=balanceChanges
+  period=period
+  currencySymbol=session.currentUser.currencySymbol
+}}
+
+<h2>
+  Average expense per day:
+  {{money avgExpensePerDay session.currentUser.currencySymbol}}
+</h2>
