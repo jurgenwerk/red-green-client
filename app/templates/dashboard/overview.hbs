@@ -2,6 +2,10 @@
   Earned: {{money incomeSum session.currentUser.currencySymbol}}
 </h2>
 
+{{progress-bar widthPercent=incomePercent class="income-bar"}}
+
 <h2>
   Spent: {{money expenseSum session.currentUser.currencySymbol}}
 </h2>
+
+{{progress-bar widthPercent=expensePercent class="expense-bar"}}
