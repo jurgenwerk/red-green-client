@@ -12,7 +12,7 @@
       {{balance-change
         tagName="li"
         balanceChange=expense
-        currencySymbol="$"
+        currencySymbol=session.currentUser.currencySymbol
         delete=(action 'delete')
       }}
     {{/each}}

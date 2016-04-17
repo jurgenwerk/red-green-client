@@ -1,7 +1,7 @@
 <h2>
-  Earned: {{money incomeSum “$”}}
+  Earned: {{money incomeSum session.currentUser.currencySymbol}}
 </h2>
 
 <h2>
-  Spent: {{money expenseSum “$”}}
+  Spent: {{money expenseSum session.currentUser.currencySymbol}}
 </h2>

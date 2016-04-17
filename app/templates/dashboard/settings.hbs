@@ -1,0 +1,24 @@
+<h2>Settings</h2>
+
+<label> Email: </label>
+<input value={{currentUser.email}}
+  oninput={{action 'updateEmail' value='target.value'}} />
+<br />
+
+<label> Currency: </label>
+<select onchange={{action 'updateCurrency' value='target.value'}}>
+  {{#each-in currencies as |currencyKey currencyValue|}}
+    <option value={{currencyKey}}
+            selected={{eq currencyKey currentUser.currency}}>
+            {{currencyValue.name}} ({{currencyValue.symbol}})
+    </option>
+  {{/each-in}}
+</select>
+
+<button {{action 'save'}} class="button-offset-top">
+  Save
+</button>
+
+{{#if saveMessage}}
+  <p> {{saveMessage}} </p>
+{{/if}}

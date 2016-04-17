@@ -18,6 +18,7 @@ Router.map(function() {
       this.route('new');
       this.route('edit', { path: ':balance_change_id/edit' });
     });
+    this.route('settings');
   });
 });
 

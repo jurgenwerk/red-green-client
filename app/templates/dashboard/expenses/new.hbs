@@ -4,6 +4,6 @@
 
 {{balance-change-form
   balanceChange=model
-  currencySymbol="$"
+  currencySymbol=session.currentUser.currencySymbol
   save=(action 'save')
 }}
