@@ -13,7 +13,6 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
     this._super(...arguments);
 
     if (transition.targetName === "dashboard.index"){
-      transition.abort();
       this.transitionTo('dashboard.overview');
     }
   },
