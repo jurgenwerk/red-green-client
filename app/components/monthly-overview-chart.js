@@ -1,4 +1,5 @@
 import Ember from 'ember';
+/* globals Chartist */
 
 export default Ember.Component.extend({
   padWithZero(value) {
